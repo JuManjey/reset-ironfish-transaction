@@ -2,8 +2,6 @@
 systemctl stop ironfishd
 sleep 5s
 yarn --cwd ~/ironfish/ironfish-cli/ start accounts:rescan --reset
-#yarn --cwd ~/ironfish/ironfish-cli/ start chain:repair --force --confirm
-yarn --cwd ~/ironfish/ironfish-cli/ start chain:repair --confirm
 systemctl restart ironfishd ironfishd-miner
 systemctl restart cron
 echo "$(tput setaf 2)Reset is successful"
